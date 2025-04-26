@@ -1,16 +1,77 @@
-# task
 
-A new Flutter project.
 
-## Getting Started
+```markdown
+# TASK - Flutter-Firebase-App
 
-This project is a starting point for a Flutter application.
+This is a simple Flutter application demonstrating:
+- Firebase Authentication (email/password)
+- Clean state management using Riverpod
+- Bottom Navigation Bar with 3 pages: Dashboard, Profile, and Settings
+- Responsive, clean UI/UX
+- Logout functionality using Firebase
 
-A few resources to get you started if this is your first Flutter project:
+## 🔥 Features
+- Email/password login using Firebase
+- Form validation
+- Responsive layout
+- Bottom navigation
+- Firebase logout with session reset
+- State management with Riverpod
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Setup Instructions
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone this repo**
+   ```bash
+   git clone https://github.com/your-username/flutter-firebase-login-app.git
+   cd flutter-firebase-login-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Setup Firebase**
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Enable Email/Password sign-in method
+   - Download `google-services.json` and place it in `android/app/`
+
+4. **Run the app**
+   ```bash
+   flutter run
+   ```
+
+## 📂 Folder Structure
+
+```
+lib/
+├── main.dart
+├── providers/
+│   └── auth_provider.dart
+├── services/
+│   └── auth_service.dart
+├── screens/
+│   ├── login_screen.dart
+│   ├── dashboard_screen.dart
+│   ├── profile_screen.dart
+│   ├── settings_screen.dart
+│   └── home_screen.dart
+```
+
+## 💡 Tech Stack
+
+- Flutter
+- Firebase Auth
+- Riverpod
+- Dart
+
+## 🙌 Author
+
+Created by Divyam Divesh.
+
+---
+
+```
+
+Would you like me to bundle the screenshots in a `screenshots/` folder and generate a ZIP with the README?
