@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 import 'dashboard_screen.dart';
+import '../../services/auth_service.dart';
+import '../../providers/auth_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'profile_screen.dart';
 import 'settings_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends ConsumerState<HomeScreen> {
   int _index = 0;
   final pages = [DashboardScreen(), ProfileScreen(), SettingsScreen()];
+
+  void _logout() async {
+    await AuthService().signOut();
+    ref.read(authProvider.notifier).state = null;
+    Navigator.pushReplacementNamed(context, '/login');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +28,12 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Flutter Task- Divyam',
         style: TextStyle(fontWeight: FontWeight.bold),),
         backgroundColor: Colors.blue,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: _logout,
+          ),
+        ],
       ),
       body: pages[_index],
       bottomNavigationBar: BottomNavigationBar(

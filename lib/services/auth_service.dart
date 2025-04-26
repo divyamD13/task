@@ -7,4 +7,7 @@ class AuthService {
     final result = await _auth.signInWithEmailAndPassword(email: email, password: password);
     return result.user;
   }
+   Future<void> signOut() async {
+    await _auth.signOut();
+  }
 }

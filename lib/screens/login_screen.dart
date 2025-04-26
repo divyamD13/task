@@ -59,7 +59,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 onPressed: _login,
                 child: Text('Login'),
                 style:ElevatedButton.styleFrom(
-    backgroundColor: Colors.red,   
+    backgroundColor: Colors.blueAccent,   
     foregroundColor: Colors.white, 
   ),
               )
