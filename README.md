@@ -72,6 +72,3 @@ Created by Divyam Divesh.
 
 ---
 
-```
-
-Would you like me to bundle the screenshots in a `screenshots/` folder and generate a ZIP with the README?
